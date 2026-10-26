@@ -147,11 +147,10 @@ best_pipeline = pipelines["XGBoost Regressor"]
 st.title("AutoVal: Pre-Owned Vehicle Valuation & Depreciation Analytics")
 st.markdown("### Manipal Institute of Technology | B.Tech. Data Analytics Mini-Project")
 
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3 = st.tabs([
     "Depreciation & Segment Analytics", 
     "Live Valuation Engine", 
-    "Model Benchmarking & CDA", 
-    "Team & References"
+    "Model Benchmarking & CDA"
 ])
 
 # ------------------------------------------------------------------------------
@@ -328,33 +327,3 @@ with tab3:
         f_groups = [g['selling_price'].values for _, g in df.groupby('fuel')]
         f_s, p_f = stats.f_oneway(*f_groups)
         st.info(f"**Result:** F-statistic = `{f_s:.2f}`, p-value = `{p_f:.4e}`\n\n*Conclusion:* Reject H0. Fuel architecture significantly affects pricing.")
-
-# ------------------------------------------------------------------------------
-# TAB 4: TEAM & REFERENCES
-# ------------------------------------------------------------------------------
-with tab4:
-    st.subheader("Project Metadata & Team Contribution")
-    st.markdown("""
-    * **Course:** CES2103 Data Analytics | III Semester B.Tech. CSE
-    * **Institution:** Manipal Institute of Technology (MIT), MAHE
-    * **Project Title:** Data-Driven Valuation and Depreciation Analytics of Pre-Owned Vehicles Using Ensemble Regression Models
-    """)
-    
-    st.markdown("#### Equal Team Contribution Breakdown")
-    team_df = pd.DataFrame([
-        {"Member": "Prisha Raj (Roll No: 11)", "Role & Responsibilities": "Web Architecture, Streamlit App Deployment, End-to-End Integration"},
-        {"Member": "Team Member 2", "Role & Responsibilities": "Data Engineering, Regex String Parsing, Brand-Grouped Median Imputation"},
-        {"Member": "Team Member 3", "Role & Responsibilities": "Exploratory Data Analysis (EDA), Correlation Heatmaps, Depreciation Curve Plots"},
-        {"Member": "Team Member 4", "Role & Responsibilities": "Confirmatory Data Analysis (CDA), Welch t-tests, ANOVA & OLS Regression Inference"},
-        {"Member": "Team Member 5", "Role & Responsibilities": "Machine Learning Pipeline, Model Benchmarking (Linear, RF, XGBoost), Cross-Validation"}
-    ])
-    st.table(team_df)
-    
-    st.markdown("#### References")
-    st.markdown("""
-    1. V. Viswanatha et al., *"Predicting the Price of Used Cars using Machine Learning,"* Proc. EASCT, 2023.
-    2. Y. Li et al., *"Research on Used Car Price Prediction Based on Random Forest and LightGBM,"* Proc. ICDSCA, 2022.
-    3. S. Bergmann and S. Feuerriegel, *"Machine Learning for Predicting Used Car Resale Prices,"* Expert Syst. Appl., vol. 261, 2025.
-    4. A. R. Lakamsani et al., *"Machine Learning-Based Used Car Price Prediction System,"* IEEE Access, vol. 13, 2025.
-    5. T. Li, *"Used Car Price Prediction and Feature Importance Analysis Using XGBoost and SHAP,"* HBEM, vol. 48, 2025.
-    """)
