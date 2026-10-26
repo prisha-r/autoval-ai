@@ -1,4 +1,4 @@
-AutoVal: Pre-Owned Vehicle Valuation & Depreciation Analytics
+## AutoVal: Pre-Owned Vehicle Valuation & Depreciation Analytics
 
 Website Application- https://autoval-ai-cqghczi4fpv3u3yaxdr34r.streamlit.app/
 
@@ -6,12 +6,12 @@ Data-driven pre-owned vehicle valuation and non-linear depreciation analytics we
 Developed as a B.Tech Data Analytics mini-project at the Manipal Institute of Technology (MIT), MAHE.
 
 
-Overview
+*Overview*
 
 AutoVal is an end-to-end data analytics and machine learning solution which is designed to address the volatility and pricing inefficiencies in the pre-owned automotive market. By integrating econometric depreciation modeling, supervised ensemble regression, and statistical confirmatory tests, this platform offers robust valuation insights and interactive predictive capabilities.
 
 
-Key Features
+*Key Features*
 
 Depreciation & Segment Analytics: Multi-line trajectory plots examining residual values across brand tiers, fuel architectures, and transmission types, paired with feature correlation heatmaps and cross-sectional age-price gradients.
 Live Valuation Engine: Real-time machine learning inference using serialized ensemble regression models, complete with counterfactual baseline comparisons and annual compound depreciation rate calculations.
@@ -27,7 +27,7 @@ Machine Learning & Preprocessing: Scikit-learn, XGBoost, Joblib, SciPy
 Data Manipulation & Visualization: Pandas, NumPy, Matplotlib, Seaborn
 
 
-Project Structure
+*Project Structure*
 
 ├── application.py # Main Streamlit application script 
 
@@ -40,7 +40,7 @@ Project Structure
 └── README.md # Project documentation
 
 
-Local Setup & Installation
+*Local Setup & Installation*
 
 Clone the repository: git clone https://github.com/prisha-r/autoval-ai cd autoval
 
@@ -49,7 +49,7 @@ Install dependencies: pip install -r requirements.txt
 Run the application locally: streamlit run application.py
 
 
-References
+*References*
 
 V. Viswanatha et al., "Predicting the Price of Used Cars using Machine Learning," Proc. EASCT, 2023.
 
